@@ -17,7 +17,8 @@ Assignment Requirements:
 		   key int and value list of strings. Please prepopulate the structure in the json file with basic data, I.e. 2 keys with each 
 		   having a list of 4 strings
 		2. Please note the id value in DataModel is a key and should be unique
-		3. The program require data presistence. Therefore, any changes 
+		3. The program require data presistence. Therefore, any changes in the data structure should reflect in the file and hence 
+		   when restarting the program it should still hold that previous data.
 	 
 	 * FileController
 		1. Use dependency injection to inject the file manager service class
@@ -34,5 +35,7 @@ Assignment Requirements:
 
 	 *** Bonus ***
 		 Use the unit test project to preform additional (quality) unit testing
+
+Please note, assignment is considered done when using swagger to execute all the API CRUD operations are working!
 
 Please either send a zip file of your solution or preferably a link to a GitHub (or equivalent) repo with the solution
