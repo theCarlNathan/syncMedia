@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omri.r.SYNECTMEDIA\\source\\repos\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj": {}
+    "D:\\SourceCodes\\syncMedia\\csharpcodingassignment\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omri.r.SYNECTMEDIA\\source\\repos\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj": {
+    "D:\\SourceCodes\\syncMedia\\csharpcodingassignment\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omri.r.SYNECTMEDIA\\source\\repos\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj",
+        "projectUniqueName": "D:\\SourceCodes\\syncMedia\\csharpcodingassignment\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj",
         "projectName": "CodingAssignment",
-        "projectPath": "C:\\Users\\Omri.r.SYNECTMEDIA\\source\\repos\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj",
-        "packagesPath": "C:\\Users\\Omri.r.SYNECTMEDIA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omri.r.SYNECTMEDIA\\source\\repos\\CodingAssignment\\CodingAssignment\\obj\\",
+        "projectPath": "D:\\SourceCodes\\syncMedia\\csharpcodingassignment\\CodingAssignment\\CodingAssignment\\CodingAssignment.csproj",
+        "packagesPath": "C:\\Users\\Carl Nathan Mier\\.nuget\\packages\\",
+        "outputPath": "D:\\SourceCodes\\syncMedia\\csharpcodingassignment\\CodingAssignment\\CodingAssignment\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Omri.r.SYNECTMEDIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Carl Nathan Mier\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +25,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://pkgs.dev.azure.com/Aquip-io/_packaging/Aquip-io/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
