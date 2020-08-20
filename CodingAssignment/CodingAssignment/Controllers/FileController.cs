@@ -15,17 +15,18 @@ namespace CodingAssignment.Controllers
     public class FileController : ControllerBase
     {
 
-        private FileManagerService _fileManger;
+        private IFileManagerService _fileManger;
 
-        public FileController()
+        public FileController(IFileManagerService fileManager)
         {
+            _fileManger = fileManager;
         }
 
         [HttpGet]
         public DataFileModel Get()
         {
-            //Not yet implemented 
-            throw new NotImplementedException();
+            return _fileManger.GetData();
+            //throw new NotImplementedException();
         }
 
         [HttpPost]
