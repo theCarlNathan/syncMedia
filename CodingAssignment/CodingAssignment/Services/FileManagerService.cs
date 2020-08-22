@@ -20,11 +20,25 @@ namespace CodingAssignment.Services
 
         public bool Insert(DataModel model)
         {
-            throw new NotImplementedException();
+            var data = GetData();
+            //model.Id = data.Data.OrderByDescending(x => x.Id).First().Id + 1;
+            if (data.Data.Select(x => x.Id).Contains(model.Id))
+            {
+                throw new Exception("ID " + model.Id + " already exists!");
+            }
+            data.Data.Add(model);
+
+            File.WriteAllText("./AppData/DataFile.json", JsonConvert.SerializeObject(data));
+            return true;
+
         }
 
         public bool Update(DataModel model, int id)
         {
+            var data = GetData();
+
+            data.Data.Where(x => x.Id == id).SetValue(c => c.Value = model.Value);
+
             throw new NotImplementedException();
         }
 
@@ -32,5 +46,6 @@ namespace CodingAssignment.Services
         {
             throw new NotImplementedException();
         }
+
     }
 }

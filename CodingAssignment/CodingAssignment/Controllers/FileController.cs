@@ -26,14 +26,32 @@ namespace CodingAssignment.Controllers
         public DataFileModel Get()
         {
             return _fileManger.GetData();
-            //throw new NotImplementedException();
         }
 
         [HttpPost]
-        public DataFileModel Post(DataModel model)
+        public ActionResult<DataFileModel> Post(DataModel model)
         {
-            //Not yet implemented 
-            throw new NotImplementedException();
+
+            try
+            {
+                _fileManger.Insert(model);
+                return Get();
+            }
+            catch(Exception ex)
+            {
+                return new JsonResult(ex.Message);
+            }
+
+            //if (_fileManger.Insert(model))
+            //{
+            //    return Get();
+            //}
+            //else
+            //{
+            //    return new JsonResult("something went wrong...");//can replace this with something better/more descriptive
+            //}
+
+            
         }
 
         [HttpPut]
