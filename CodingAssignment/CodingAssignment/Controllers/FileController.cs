@@ -23,49 +23,52 @@ namespace CodingAssignment.Controllers
         }
 
         [HttpGet]
-        public DataFileModel Get()
+        public DataFileModel Get(int? id)
         {
-            return _fileManger.GetData();
+            return _fileManger.GetData(id);
         }
 
         [HttpPost]
-        public ActionResult<DataFileModel> Post(DataModel model)
+        public ActionResult Post(DataModel model)
         {
 
             try
             {
                 _fileManger.Insert(model);
-                return Get();
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return new JsonResult(ex.Message);
+            }            
+        }
+
+        [HttpPut]
+        public ActionResult Put(DataModel model)
+        {
+            try
+            {
+                _fileManger.Update(model);
+                return Ok();
             }
             catch(Exception ex)
             {
                 return new JsonResult(ex.Message);
             }
-
-            //if (_fileManger.Insert(model))
-            //{
-            //    return Get();
-            //}
-            //else
-            //{
-            //    return new JsonResult("something went wrong...");//can replace this with something better/more descriptive
-            //}
-
-            
-        }
-
-        [HttpPut]
-        public DataFileModel Put(DataModel model, int id)
-        {
-            //Not yet implemented 
-            throw new NotImplementedException();
         }
 
         [HttpDelete]
-        public DataFileModel Delete(int id)
+        public ActionResult Delete(int id)
         {
-            //Not yet implemented 
-            throw new NotImplementedException();
+            try
+            {
+                _fileManger.Delete(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return new JsonResult(ex.Message);
+            }
         }
     }
 }

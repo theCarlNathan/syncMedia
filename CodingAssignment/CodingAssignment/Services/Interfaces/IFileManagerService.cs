@@ -12,7 +12,7 @@ namespace CodingAssignment.Services.Interfaces
         /// Returns the complete data model 
         /// </summary>
         /// <returns></returns>
-        DataFileModel GetData();
+        DataFileModel GetData(int? Id);
 
         /// <summary>
         /// Insert new data model 
@@ -24,7 +24,7 @@ namespace CodingAssignment.Services.Interfaces
         /// Updates a specific data model using the id as the key
         /// </summary>
         /// <returns></returns>
-        bool Update(DataModel model, int id);
+        bool Update(DataModel model);
 
         /// <summary>
         /// Deletes a specific data model using the id as the key
