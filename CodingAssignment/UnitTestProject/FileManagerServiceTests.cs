@@ -23,7 +23,7 @@ namespace UnitTestProject
             //Arrange
 
             //Act
-            var res = _service.GetData();
+            var res = _service.GetData(null);
 
             //Assert
             Assert.IsNotNull(res);
